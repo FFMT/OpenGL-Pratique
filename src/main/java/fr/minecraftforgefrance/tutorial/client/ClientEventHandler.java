@@ -6,9 +6,10 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 public class ClientEventHandler {
 
     @SubscribeEvent
-    public void onOverlayRendered(RenderGameOverlayEvent.Post event) {
-        if(event.getType() == RenderGameOverlayEvent.ElementType.EXPERIENCE) {
-            Sprite.draw();
+    public void onGuiDrawing(RenderGameOverlayEvent.Pre event) {
+        if(event.getType() == RenderGameOverlayEvent.ElementType.HOTBAR) {
+            Renderer.drawTransparentSprite(event.getResolution());
+            Renderer.drawModel(event.getResolution());
         }
     }
 }
