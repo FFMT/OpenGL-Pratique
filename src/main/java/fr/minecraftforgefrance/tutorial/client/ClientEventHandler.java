@@ -24,7 +24,9 @@ public class ClientEventHandler {
 
         // point important: dans un Gui, la coordonnée sur Z n'influence pas la taille
         // (mais permet d'afficher du contenu devant ou derrière quelque chose, selon la valeur choisie)
-        glTranslatef(100f, 30f, -1f);
+        glTranslatef(100f, 0f, 0f);
+        glTranslatef(0f, 30f, 0f);
+        glTranslatef(0f, 0f, -1f);
         Renderer.drawModel(resolution);
         glPopMatrix();
     }
