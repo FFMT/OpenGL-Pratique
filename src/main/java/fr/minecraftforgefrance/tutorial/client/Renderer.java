@@ -4,11 +4,9 @@ import fr.minecraftforgefrance.tutorial.OpenGLPratique;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.gui.inventory.GuiInventory;
-import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.VertexBuffer;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
-import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.ResourceLocation;
 
 import static org.lwjgl.opengl.GL11.*;
@@ -16,7 +14,7 @@ import static org.lwjgl.opengl.GL11.*;
 /**
  * Ceci est une classe utilisée pour l'exemple et n'est probablement pas utilisable en pratique sans faire des gros changements.
  *
- * Permet de dessiner le logo de MinecraftForgeFrance et .
+ * Permet de dessiner le logo de MinecraftForgeFrance et le modèle du joueur.
  */
 public class Renderer {
 
@@ -29,7 +27,6 @@ public class Renderer {
         Minecraft.getMinecraft().getTextureManager().bindTexture(opaqueLogo);
         Tessellator tessellator = Tessellator.getInstance();
         VertexBuffer buffer = tessellator.getBuffer();
-        GlStateManager.disableCull();
         buffer.begin(GL_QUADS, DefaultVertexFormats.POSITION_TEX_COLOR);
         float w = WIDTH / ((float)resolution.getScaleFactor());
         float h = HEIGHT / ((float)resolution.getScaleFactor());
@@ -38,14 +35,12 @@ public class Renderer {
         buffer.pos(w, h,0).tex(1f, 1f).color(1f, 1f, 1f, 1f).endVertex();
         buffer.pos(w,0,0).tex(1f, 0).color(1f, 1f, 1f, 1f).endVertex();
         tessellator.draw();
-        GlStateManager.enableCull();
     }
 
     public static void drawTransparentSprite(ScaledResolution resolution) {
         Minecraft.getMinecraft().getTextureManager().bindTexture(transparentLogo);
         Tessellator tessellator = Tessellator.getInstance();
         VertexBuffer buffer = tessellator.getBuffer();
-        GlStateManager.disableCull();
         buffer.begin(GL_QUADS, DefaultVertexFormats.POSITION_TEX_COLOR);
         float w = WIDTH / ((float)resolution.getScaleFactor());
         float h = HEIGHT / ((float)resolution.getScaleFactor());
@@ -54,7 +49,6 @@ public class Renderer {
         buffer.pos(w, h,0).tex(1f, 1f).color(1f, 1f, 1f, 1f).endVertex();
         buffer.pos(w,0,0).tex(1f, 0).color(1f, 1f, 1f, 1f).endVertex();
         tessellator.draw();
-        GlStateManager.enableCull();
     }
 
     public static void drawModel(ScaledResolution resolution) {

@@ -13,6 +13,9 @@ public class ClientEventHandler {
         }
     }
 
+    /**
+     * C'est la méthode que l'on va modifier dans ce tutoriel
+     */
     private void draw(ScaledResolution resolution) {
         Renderer.drawTransparentSprite(resolution);
         Renderer.drawModel(resolution);
