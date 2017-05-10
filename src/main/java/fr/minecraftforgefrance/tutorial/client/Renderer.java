@@ -27,13 +27,13 @@ public class Renderer {
         Minecraft.getMinecraft().getTextureManager().bindTexture(opaqueLogo);
         Tessellator tessellator = Tessellator.getInstance();
         VertexBuffer buffer = tessellator.getBuffer();
-        buffer.begin(GL_QUADS, DefaultVertexFormats.POSITION_TEX_COLOR);
+        buffer.begin(GL_QUADS, DefaultVertexFormats.POSITION_TEX);
         float w = WIDTH / ((float)resolution.getScaleFactor());
         float h = HEIGHT / ((float)resolution.getScaleFactor());
-        buffer.pos(0,0,0).tex(0, 0).color(1f, 1f, 1f, 1f).endVertex();
-        buffer.pos(0,h,0).tex(0, 1f).color(1f, 1f, 1f, 1f).endVertex();
-        buffer.pos(w, h,0).tex(1f, 1f).color(1f, 1f, 1f, 1f).endVertex();
-        buffer.pos(w,0,0).tex(1f, 0).color(1f, 1f, 1f, 1f).endVertex();
+        buffer.pos(0,0,0).tex(0, 0).endVertex();
+        buffer.pos(0,h,0).tex(0, 1f).endVertex();
+        buffer.pos(w, h,0).tex(1f, 1f).endVertex();
+        buffer.pos(w,0,0).tex(1f, 0).endVertex();
         tessellator.draw();
     }
 
@@ -41,13 +41,13 @@ public class Renderer {
         Minecraft.getMinecraft().getTextureManager().bindTexture(transparentLogo);
         Tessellator tessellator = Tessellator.getInstance();
         VertexBuffer buffer = tessellator.getBuffer();
-        buffer.begin(GL_QUADS, DefaultVertexFormats.POSITION_TEX_COLOR);
+        buffer.begin(GL_QUADS, DefaultVertexFormats.POSITION_TEX);
         float w = WIDTH / ((float)resolution.getScaleFactor());
         float h = HEIGHT / ((float)resolution.getScaleFactor());
-        buffer.pos(0,0,0).tex(0, 0).color(1f, 1f, 1f, 1f).endVertex();
-        buffer.pos(0,h,0).tex(0, 1f).color(1f, 1f, 1f, 1f).endVertex();
-        buffer.pos(w, h,0).tex(1f, 1f).color(1f, 1f, 1f, 1f).endVertex();
-        buffer.pos(w,0,0).tex(1f, 0).color(1f, 1f, 1f, 1f).endVertex();
+        buffer.pos(0,0,0).tex(0, 0).endVertex();
+        buffer.pos(0,h,0).tex(0, 1f).endVertex();
+        buffer.pos(w, h,0).tex(1f, 1f).endVertex();
+        buffer.pos(w,0,0).tex(1f, 0).endVertex();
         tessellator.draw();
     }
 
