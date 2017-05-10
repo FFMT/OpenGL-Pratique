@@ -1,8 +1,6 @@
 Tutoriel OpenGL Pratique pour le modding Minecraft
 ==================================================
 
-Bonjour! Vous êtes dans la branche principale!
+Bonjour! Vous êtes dans la branche pour la commande glTranslate!
 
-* [glColor](../../tree/glColor)
-* [glTranslate](../../tree/glTranslate)
-* [glRotate](../../tree/glRotate)
+[Voir le coeur du tutoriel](src/main/java/fr/minecraftforgefrance/tutorial/client/ClientEventHandler.java#L21)
