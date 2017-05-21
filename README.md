@@ -1,18 +1,6 @@
 Tutoriel OpenGL Pratique pour le modding Minecraft
 ==================================================
 
-Bonjour! Vous êtes dans la branche principale!
+Bonjour! Vous êtes dans la branche pour le stencil test!
 
-Commandes
----------
-* [glColor](../../tree/glColor)
-* [glTranslate](../../tree/glTranslate)
-* [glRotate](../../tree/glRotate)
-* [glScale](../../tree/glScale)
-
-Points avancés
---------------
-* [Ordre des textures](../../tree/multipleTextures)
-* [Utilisation du VertexBuffer](../../tree/vertexBuffer)
-* [Le Scissor Test](../../tree/scissorTest)
-* [Le Stencil buffer](../../tree/stencilBuffer)
+[Voir le coeur du tutoriel](src/main/java/fr/minecraftforgefrance/tutorial/client/ClientEventHandler.java#L22)
